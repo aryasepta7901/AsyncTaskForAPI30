@@ -1,7 +1,6 @@
 package com.example.a7asynctaskv2;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -32,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //Inisialiasi
         button = findViewById(R.id.download);
         imageView = findViewById(R.id.image);
 
-
+        //Activity
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
                                 p.show();
                             }
                         });
-
                         // doInbackground method of asyntask
                         try {
                             ImageUrl = new URL("https://stis.ac.id/media/source/up.png");
@@ -80,11 +77,8 @@ public class MainActivity extends AppCompatActivity {
                                 } else {
                                     p.show();
                                 }
-
-
                             }
                         });
-
                     }
                 });
 
